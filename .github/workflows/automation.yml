@@ -14,9 +14,9 @@ jobs:
       - name: broom install
         run: Rscript -e 'install.packages("broom", type="binary")'
       - name: Run script
-        run: Rscript CrimePDFscraper.R
+        run: Rscript notif_only.R
       - name: Results
         run: |
           git add -A
-          git commit -m 'PDF uploaded' || echo "No changes to commit"
+          git commit -m 'Data uploaded' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
