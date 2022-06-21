@@ -8,3 +8,5 @@ page_tables <- page %>%
   unlist(recursive=F)
 
 bad_frame <- do.call(rbind.data.frame,page_tables)
+
+write_csv(bad_frame, "Output/notif.csv")
